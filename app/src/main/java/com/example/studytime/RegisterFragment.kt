@@ -1,18 +1,16 @@
 package com.example.studytime
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.example.studytime.databinding.FragmentLoginBinding
 import com.example.studytime.databinding.FragmentRegisterBinding
 
-class LoginFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
-    private var _binding : FragmentLoginBinding? = null
+    private var _binding : FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,11 +18,11 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         val view = binding.root
-        binding.registerButton.setOnClickListener {
-            view.findNavController().navigate(R.id.registerFragment)
-        }
+        /*binding.loginButton.setOnClickListener {
+            view.findNavController().navigate(R.id.loginFragment)
+        }*/
         return view
     }
 

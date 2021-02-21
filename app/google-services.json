@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101584262002",
+    "project_id": "studytime-df16c",
+    "storage_bucket": "studytime-df16c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101584262002:android:c9b0d7c9aef7edd92d03eb",
+        "android_client_info": {
+          "package_name": "com.example.studytime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101584262002-e7m7bva1efcgcbc1e7vm7fcglmqe1715.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUIq9_-RtRSo4f6D1eGaACojynt9o-IwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101584262002-e7m7bva1efcgcbc1e7vm7fcglmqe1715.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
