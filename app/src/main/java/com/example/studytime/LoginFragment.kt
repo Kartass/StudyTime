@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.studytime.databinding.FragmentLoginBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -36,8 +37,11 @@ class LoginFragment : Fragment() {
             val pw = binding.passwordText.text.toString()
             if(email.isNotEmpty() && pw.isNotEmpty()) {
                 if(isEmail(email)) {
-                    auth.signInWithEmailAndPassword(email, pw).addOnFailureListener {
-                        Toast.makeText(activity, "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                    auth.signInWithEmailAndPassword(email, pw).addOnCompleteListener {
+                        if(it.isSuccessful) {
+                            view.findNavController().navigate(R.id.loginToMain)
+                        }
+                        else Toast.makeText(activity, "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
                 else {
